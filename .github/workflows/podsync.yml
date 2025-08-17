@@ -2,30 +2,29 @@ name: Run Podsync
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # A cada 30 minutos
-  workflow_dispatch:        # Permite rodar manualmente
+    - cron: '0 */6 * * *'  # Executa a cada 6 horas
+  workflow_dispatch:       # Permite execução manual
 
 jobs:
-  update-feeds:
+  sync:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
 
-      - name: Set up Docker
-        uses: docker/setup-buildx-action@v2
+      - name: Criar pasta de saída
+        run: mkdir -p data
 
-      - name: Run Podsync
+      - name: Rodar Podsync com config.toml
         run: |
           docker run --rm \
-            -v ${{ github.workspace }}/podsync.json:/app/config.json \
-            -v ${{ github.workspace }}/feeds:/app/feeds \
-            ghcr.io/mxpv/podsync:latest \
-            /app/config.json
+            -v ${{ github.workspace }}/.github/podsync/config.toml:/app/config.toml \
+            -v ${{ github.workspace }}/data:/app/data \
+            ghcr.io/mxpv/podsync:latest
 
-      - name: Upload feeds as artifact
+      - name: Upload dos feeds gerados
         uses: actions/upload-artifact@v4
         with:
           name: podcast-feeds
-          path: feeds/
+          path: data/
