@@ -25,13 +25,13 @@ jobs:
       - name: Build Podsync
         run: |
           cd podsync/cmd/podsync
-          go build -o ../../../../podsync
+          go build -o ../../../../podsync-bin
 
       - name: Create tokens.toml
         run: echo 'youtube = "${{ secrets.YOUTUBE_API_KEY }}"' > tokens.toml
 
       - name: Run Podsync
-        run: ./podsync --config podsync.json --token tokens.toml
+        run: ./podsync-bin --config podsync.json --token tokens.toml
 
       - name: Copy feeds to repo
         run: |
