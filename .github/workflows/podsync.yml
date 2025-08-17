@@ -30,7 +30,7 @@ jobs:
 
       - name: List files for debugging
         run: ls -la
-
+        
       - name: Run Podsync
         run: ./podsync-bin --config podsync.json
 
