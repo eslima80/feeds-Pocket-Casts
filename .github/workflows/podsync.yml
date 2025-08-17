@@ -11,8 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout your repository
         uses: actions/checkout@v3
+
+      - name: Clone Podsync
+        run: git clone https://github.com/mxpv/podsync.git
 
       - name: Set up Go
         uses: actions/setup-go@v4
