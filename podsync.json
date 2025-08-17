@@ -1,0 +1,412 @@
+{
+  "feeds": {
+    "estudio5elemento": {
+      "url": "https://www.youtube.com/channel/UC1_UK9KENF9VMFSaM68Bzhw",
+      "page_size": 20,
+      "title": "Estúdio 5 Elemento",
+      "description": "Podcast do Estúdio 5 Elemento",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/estudio5elemento.xml"
+    },
+    "brasileiraporacaso": {
+      "url": "https://www.youtube.com/channel/UCv8R2tf9w9JNnAkhHD03cKg",
+      "page_size": 20,
+      "title": "Brasileira por acaso",
+      "description": "Vídeos da Giorgia sobre vida na Itália 🇮🇹",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/brasileiraporacaso.xml"
+    },
+    "economistasincero": {
+      "url": "https://www.youtube.com/channel/UCrp0zmecZ3TNV8FSR-tjv7A",
+      "page_size": 20,
+      "title": "Economista Sincero",
+      "description": "Economia sem enrolação",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/economistasincero.xml"
+    },
+    "MarceloAndrade": {
+      "url": "https://www.youtube.com/channel/UCP3CtEXi5nxbhei_aBfIOVA",
+      "page_size": 20,
+      "title": "Marcelo Andrade",
+      "description": "Conteúdo todos os dias sobre História e Atualidades.",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/MarceloAndrade.xml"
+    },
+    "brasilparalelo": {
+      "url": "https://www.youtube.com/channel/UCKDjjeeBmdaiicey2nImISw",
+      "page_size": 20,
+      "title": "Brasil Paralelo",
+      "description": "A Brasil Paralelo acredita que o Brasil vai dar certo",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/brasilparalelo.xml"
+    },
+    "venecasagrande": {
+      "url": "https://www.youtube.com/channel/UC084Mraf1n0rUIhz0V3sZfg",
+      "page_size": 20,
+      "title": "Venê Casagrande",
+      "description": "Notícias o Flamengo",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/venecasagrande.xml"
+    },
+    "CentroDomBosco": {
+      "url": "https://www.youtube.com/channel/UCJ4L35KkwL-ZA0jedMKqiwQ",
+      "page_size": 20,
+      "title": "Centro Dom Bosco",
+      "description": "Rezar, estudar e defender a fé.",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/CentroDomBosco.xml"
+    },
+    "CortesCentroDomBosco": {
+      "url": "https://www.youtube.com/channel/UCG-unPBrk78FFsWvhtyuFYQ",
+      "page_size": 20,
+      "title": "Cortes do Centro Dom Bosco",
+      "description": "Principais cortes de aulas, lives e podcasts do Centro Dom Bosco",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/CortesCentroDomBosco.xml"
+    },
+    "SensoIncomum": {
+      "url": "https://www.youtube.com/channel/UCwdBKw59gcCXMdTeUA-6G6A",
+      "page_size": 20,
+      "title": "Senso Incomum",
+      "description": "Análises políticas, culturais e intelectuais que contrariem a corrente dominante.",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/SensoIncomum.xml"
+    },
+    "OcidenteemFuria": {
+      "url": "https://www.youtube.com/channel/UCmArkwjUI8VRHudOjEsVCUw",
+      "page_size": 20,
+      "title": "Ocidente em Fúria",
+      "description": "Católico Apostólico Romano, tradicionalista de extremísssima direita, praxeologista anarcocapitalista",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/OcidenteemFuria.xml"
+    },
+    "BernardoPKuster": {
+      "url": "https://www.youtube.com/channel/UCVLMRyUik9KrSdFdfRUiFgg",
+      "page_size": 20,
+      "title": "Bernardo P Küster",
+      "description": "Formar católicos é a minha missão",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/BernardoPKuster.xml"
+    },
+    "ProducoesProductions": {
+      "url": "https://www.youtube.com/channel/UCPUP2xfJDmzazTdrrTdyNmw",
+      "page_size": 20,
+      "title": "Produções Productions",
+      "description": "O canal dos embaixadores",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/ProducoesProductions.xml"
+    },
+    "ContoUmConto": {
+      "url": "https://www.youtube.com/channel/UCsqheVzvPGoI6S3pP3MBlhg",
+      "page_size": 20,
+      "title": "Conto um Conto",
+      "description": "Conto um Conto com Marcelo Fávaro",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/ContoUmConto.xml"
+    },
+    "ilgiornale": {
+      "url": "https://www.youtube.com/channel/UCIqrK92MVWSSUqNzN1tuP5A",
+      "page_size": 20,
+      "title": "Il Giornale",
+      "description": "Video, gli approfondimenti e i reportage dei nostri giornalisti.",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/ilgiornale.xml"
+    },
+    "EscoladeHistoriadaIgreja": {
+      "url": "https://www.youtube.com/channel/UCFKIGYXuOwqkeWpV-_OxeHQ",
+      "page_size": 20,
+      "title": "Escola de História da Igreja",
+      "description": "Conheça a História da Igreja com amplitude e profundidade.",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/EscoladeHistoriadaIgreja.xml"
+    },
+    "RicaPerrone": {
+      "url": "https://www.youtube.com/channel/UCkYRv-hbWjbq8YC_ZsoYoMg",
+      "page_size": 20,
+      "title": "Rica Perrone",
+      "description": "Notícias Futebol",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/RicaPerrone.xml"
+    },
+    "PadrePauloRicardo": {
+      "url": "https://www.youtube.com/channel/UCP6L9TPS3pHccVRiDB_cvqQ",
+      "page_size": 20,
+      "title": "Padre Paulo Ricardo",
+      "description": "Padre Paulo Ricardo",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/PadrePauloRicardo.xml"
+    },
+    "ResumaPeter": {
+      "url": "https://www.youtube.com/channel/UCHBVfzefo0XcJyDcKm3vC1w",
+      "page_size": 20,
+      "title": "Resuma, Peter",
+      "description": "Resuma, Peter",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/ResumaPeter.xml"
+    },
+    "OlavodeCarvalho": {
+      "url": "https://www.youtube.com/channel/UC6RQhzm93SterWntL7GzqYQ",
+      "page_size": 20,
+      "title": "Olavo de Carvalho",
+      "description": "Olavo de Carvalho",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/OlavodeCarvalho.xml"
+    },
+    "TemdeTutto": {
+      "url": "https://www.youtube.com/channel/UCECL1FVc60xFy-sBlJD2bLw",
+      "page_size": 20,
+      "title": "Tem de Tutto",
+      "description": "Tem de Tutto",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/TemdeTutto.xml"
+    },
+    "FrancaisAuthentique": {
+      "url": "https://www.youtube.com/channel/UCQpM25U6iqaRSO-SZxd5oDw",
+      "page_size": 20,
+      "title": "Français Authentique",
+      "description": "Français Authentique",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/FrancaisAuthentique.xml"
+    },
+    "MauroCezar": {
+      "url": "https://www.youtube.com/channel/UCRcRAyb5Y4x3HVNKBZ9SMLA",
+      "page_size": 20,
+      "title": "Mauro Cezar",
+      "description": "Mauro Cezar",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/MauroCezar.xml"
+    },
+    "LearnItalianwithLucrezia": {
+      "url": "https://www.youtube.com/channel/UCnVc-IW8Q98qFmQcXla5FdQ",
+      "page_size": 20,
+      "title": "Learn Italian with Lucrezia",
+      "description": "Learn Italian with Lucrezia",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/LearnItalianwithLucrezia.xml"
+    },
+    "LenguaMare": {
+      "url": "https://www.youtube.com/channel/UCCDM2EinoXN1O261mmGobVQ",
+      "page_size": 20,
+      "title": "Łengua Mare",
+      "description": "Łengua Mare",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/LenguaMare.xml"
+    },
+    "CaioCoppolla": {
+      "url": "https://www.youtube.com/channel/UCqkoOgSof-lNcv8OzRPQj6w",
+      "page_size": 20,
+      "title": "Caio Coppolla",
+      "description": "Caio Coppolla",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/CaioCoppolla.xml"
+    },
+    "GuilhermeFreire": {
+      "url": "https://www.youtube.com/channel/UC6KlBoZBta-zkDB2L_nAtqQ",
+      "page_size": 20,
+      "title": "Guilherme Freire",
+      "description": "Guilherme Freire",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/GuilhermeFreire.xml"
+    },
+    "CanaldoHolder": {
+      "url": "https://www.youtube.com/channel/UCJIcpGAVfGIVgHSQ6oCcrXg",
+      "page_size": 20,
+      "title": "Canal do Holder",
+      "description": "Canal do Holder",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/CanaldoHolder.xml"
+    },
+    "ItalianoAutomatico": {
+      "url": "https://www.youtube.com/channel/UChJtl-bJFgQit_BmjL5axtg",
+      "page_size": 20,
+      "title": "Italiano Automatico",
+      "description": "Impara l'Italiano con Italiano Automatico",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/ItalianoAutomatico.xml"
+    },
+    "IsraelAsaphFla": {
+      "url": "https://www.youtube.com/channel/UCtBJ6xPiEa4dtpR1jcLpwxA",
+      "page_size": 20,
+      "title": "Israel Asaph Fla",
+      "description": "Israel Asaph Fla",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/IsraelAsaphFla.xml"
+    },
+    "MarcoNeves": {
+      "url": "https://www.youtube.com/channel/UCDrvH3r4shfaATN7ADsqujQ",
+      "page_size": 20,
+      "title": "Marco Neves",
+      "description": "Vídeos sobre a língua portuguesa e a linguagem humana.",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/MarcoNeves.xml"
+    },
+    "LegadoCatolico": {
+      "url": "https://www.youtube.com/channel/UCG_ZHUBtU2uqYQZH_8FBngw",
+      "page_size": 20,
+      "title": "Legado Católico",
+      "description": "Legado Católico",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/LegadoCatolico.xml"
+    },
+    "LucasLancaster": {
+      "url": "https://www.youtube.com/channel/UCIIsXaaB3rGB8WbcnUxIrVw",
+      "page_size": 20,
+      "title": "Lucas Lancaster",
+      "description": "História da Igreja, História Ocidental e de Patrologia",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/LucasLancaster.xml"
+    },
+    "olavoredpill": {
+      "url": "https://www.youtube.com/channel/UCryU6hRaiOzXKipk6_AEAlg",
+      "page_size": 20,
+      "title": "OLAVO REDPILL",
+      "description": "OLAVO REDPILL",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/olavoredpill.xml"
+    },
+    "Coisasqueeusei": {
+      "url": "https://www.youtube.com/channel/UCEw17H1rRG0Kh5RsAvECXxQ",
+      "page_size": 20,
+      "title": "Coisas que eu sei",
+      "description": "Coisas que eu sei",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/Coisasqueeusei.xml"
+    },
+    "ManrastaConnection": {
+      "url": "https://www.youtube.com/channel/UCPUP2xfJDmzazTdrrTdyNmw",
+      "page_size": 20,
+      "title": "MANRASTA CONNECTION",
+      "description": "MANRASTA CONNECTION",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/ManrastaConnection.xml"
+    },
+    "InstitutoBorborema": {
+      "url": "https://www.youtube.com/channel/UCDAjiHmQnkHrIBNai5PiSyg",
+      "page_size": 20,
+      "title": "Instituto Borborema",
+      "description": "Instituto Borborema",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/InstitutoBorborema.xml"
+    },
+    "GazetadoPovo": {
+      "url": "https://www.youtube.com/channel/UCWdGgeyOnCOGnvhNdbVl1dQ",
+      "page_size": 20,
+      "title": "Gazeta do Povo",
+      "description": "Gazeta do Povo",
+      "format": "audio",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/GazetadoPovo.xml"
+    },
+    "CortesdaTNTSports": {
+      "url": "https://www.youtube.com/channel/UC58zOo8_-ZQVF6o-FKMUqCQ",
+      "page_size": 20,
+      "title": "Cortes da TNT Sports",
+      "description": "Cortes da TNT Sports",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/CortesdaTNTSports.xml"
+    },
+    "MelhorFuteboldoMundo": {
+      "url": "https://www.youtube.com/channel/UCiQ7Ll2Gsb5eQhgQQhZ2lGQ",
+      "page_size": 20,
+      "title": "Melhor Futebol do Mundo",
+      "description": "Melhor Futebol do Mundo",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/MelhorFuteboldoMundo.xml"
+    },
+    "TNTSportsBrasil": {
+      "url": "https://www.youtube.com/channel/UCs-6sCz2LJm1PrWQN4ErsPw",
+      "page_size": 20,
+      "title": "TNT Sports Brasil",
+      "description": "TNT Sports Brasil",
+      "format": "video",
+      "quality": "high",
+      "update_period": "30m",
+      "file_template": "feeds/TNTSportsBrasil.xml"
+    }
+  }
+}
+
+
+
+
+
+
+
+
