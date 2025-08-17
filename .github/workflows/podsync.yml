@@ -32,7 +32,7 @@ jobs:
         run: ls -la
 
       - name: Run Podsync
-        run: ./podsync-bin --config podsync.json --token tokens.toml
+        run: ./podsync-bin --config podsync.json
 
       - name: Copy feeds to repo
         run: |
