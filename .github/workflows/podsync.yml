@@ -20,11 +20,12 @@ jobs:
 
       - name: Install Podsync
         run: go install github.com/mxpv/podsync@latest
+        
+      - name: Create tokens.toml
+        run: echo 'youtube = "${{ secrets.YOUTUBE_API_KEY }}"' > tokens.toml
 
       - name: Run Podsync
-        env:
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-        run: podsync --config podsync.json
+        run: podsync --config podsync.json --token tokens.toml
 
       - name: Copy feeds to repo
         run: |
