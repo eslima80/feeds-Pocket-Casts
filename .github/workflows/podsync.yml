@@ -1,37 +1,34 @@
 name: Run Podsync
 
 on:
-  schedule:
-    - cron: '0 * * * *'  # Executa a cada 1 hora
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-run:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
           go-version: '1.21'
-          cache: false  # Desativa cache automático
-
-      - name: Clone Podsync
-        run: git clone https://github.com/mxpv/podsync.git
 
       - name: Build Podsync
         run: |
-          cd podsync/cmd/podsync
-          go build -o ../../../../podsync-bin
+          go build -o podsync-bin ./podsync/cmd/podsync
 
-      - name: Create tokens.toml
-        run: echo 'youtube = "${{ secrets.YOUTUBE_API_KEY }}"' > tokens.toml
+      - name: List files for debugging
+        run: ls -la
 
       - name: Run Podsync
         run: ./podsync-bin --config podsync.json --token tokens.toml
+
 
       - name: Copy feeds to repo
         run: |
