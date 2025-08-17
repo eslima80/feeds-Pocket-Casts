@@ -22,10 +22,10 @@ jobs:
       - name: Clone Podsync
         run: git clone https://github.com/mxpv/podsync.git
 
-- name: Build Podsync
-  run: |
-    cd podsync/cmd/podsync
-    go build -o ../../../../podsync
+      - name: Build Podsync
+        run: |
+          cd podsync/cmd/podsync
+          go build -o ../../../../podsync
 
       - name: Create tokens.toml
         run: echo 'youtube = "${{ secrets.YOUTUBE_API_KEY }}"' > tokens.toml
