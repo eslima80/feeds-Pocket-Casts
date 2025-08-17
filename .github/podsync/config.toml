@@ -1,0 +1,560 @@
+# Web server related configuration.
+[server]
+# HTTP server port.
+port = 8080
+
+# Server will be accessible from http://192.168.0.8:8080, but episode links will point to https://my.test.host:4443/ID1/XYZ
+hostname = "http://192.168.0.8:8080"
+# Bind a specific IP addresses for server ,"*": bind all IP addresses which is default option, localhost or 127.0.0.1  
+bind_address = "0.0.0.0"
+# Specify path for reverse proxy and only [A-Za-z0-9]
+path = ""
+
+certificate_path = "/var/www/cert.pem"  
+key_file_path = "/var/www/priv.pem"
+
+# Configure where to store the episode data
+[storage]
+  # Could be "local" (default) for the local file system, or "s3" for a S3-compatible storage provider (e.g. AWS S3)
+  type = "local"
+
+  [storage.local]
+  data_dir = "/app/data" # Don't change if you run podsync via docker
+
+
+[tokens]
+youtube = "AIzaSyAWf7fY8rI-Yk_QX66lN4xactNnaYc8SuM" # YouTube API Key.
+
+[cleanup]
+keep_last = 20  # Keep last 20 episodes globally (unless overridden per feed)
+
+
+[feeds.estudio5elemento]
+url = "https://www.youtube.com/channel/UC1_UK9KENF9VMFSaM68Bzhw"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Estúdio 5 Elemento"
+description = "Podcast do Estúdio 5 Elemento"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.estudio5elemento.cleanup]
+enabled = true
+
+[feeds.brasileiraporacaso]
+url = "https://www.youtube.com/channel/UCv8R2tf9w9JNnAkhHD03cKg"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Brasileira por acaso"
+description = "Vídeos da Giorgia sobre vida na Itália 🇮🇹"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.brasileiraporacaso.cleanup]
+enabled = true
+
+[feeds.economistasincero]
+url = "https://www.youtube.com/channel/UCrp0zmecZ3TNV8FSR-tjv7A"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Economista Sincero"
+description = "Economia sem enrolação"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.economistasincero.cleanup]
+enabled = true
+
+[feeds.MarceloAndrade]
+url = "https://www.youtube.com/channel/UCP3CtEXi5nxbhei_aBfIOVA"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Marcelo Andrade"
+description = "Conteúdo todos os dias sobre História e Atualidades."
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.MarceloAndrade.cleanup]
+enabled = true
+
+[feeds.brasilparalelo]
+url = "https://www.youtube.com/channel/UCKDjjeeBmdaiicey2nImISw"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Brasil Paralelo"
+description = "A Brasil Paralelo acredita que o Brasil vai dar certo"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.brasilparalelo.cleanup]
+enabled = true
+
+[feeds.venecasagrande]
+url = "https://www.youtube.com/channel/UC084Mraf1n0rUIhz0V3sZfg"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Venê Casagrande"
+description = "Notícias o Flamengo"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.venecasagrande.cleanup]
+enabled = true
+
+[feeds.CentroDomBosco]
+url = "https://www.youtube.com/channel/UCJ4L35KkwL-ZA0jedMKqiwQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Centro Dom Bosco"
+description = "Rezar, estudar e defender a fé."
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.CentroDomBosco.cleanup]
+enabled = true
+
+[feeds.CortesCentroDomBosco]
+url = "https://www.youtube.com/channel/UCG-unPBrk78FFsWvhtyuFYQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Cortes do Centro Dom Bosco"
+description = "Principais cortes de aulas, lives e podcasts do Centro Dom Bosco"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.CortesCentroDomBosco.cleanup]
+enabled = true
+
+[feeds.SensoIncomum]
+url = "https://www.youtube.com/channel/UCwdBKw59gcCXMdTeUA-6G6A"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Senso Incomum"
+description = "Análises políticas, culturais e intelectuais que contrariem a corrente dominante."
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.SensoIncomum.cleanup]
+enabled = true
+
+[feeds.OcidenteemFuria]
+url = "https://www.youtube.com/channel/UCmArkwjUI8VRHudOjEsVCUw"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Ocidente em Fúria"
+description = "Católico Apostólico Romano, tradicionalista de extremísssima direita, praxeologista anarcocapitalista"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.OcidenteemFuria.cleanup]
+enabled = true
+
+[feeds.BernardoPKuster]
+url = "https://www.youtube.com/channel/UCVLMRyUik9KrSdFdfRUiFgg"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Bernardo P Küster"
+description = "Formar católicos é a minha missão"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.BernardoPKuster.cleanup]
+enabled = true
+
+[feeds.ProducoesProductions]
+url = "https://www.youtube.com/channel/UCPUP2xfJDmzazTdrrTdyNmw"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Produções Productions"
+description = "O canal dos embaixadores"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.ProducoesProductions.cleanup]
+enabled = true
+
+[feeds.ContoUmConto]
+url = "https://www.youtube.com/channel/UCsqheVzvPGoI6S3pP3MBlhg"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Conto um Conto"
+description = "Conto um Conto com Marcelo Fávaro"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.ContoUmConto.cleanup]
+enabled = true
+
+[feeds.ilgiornale]
+url = "https://www.youtube.com/channel/UCIqrK92MVWSSUqNzN1tuP5A"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Il Giornale"
+description = "Video, gli approfondimenti e i reportage dei nostri giornalisti."
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.ilgiornale.cleanup]
+enabled = true
+
+[feeds.EscoladeHistoriadaIgreja]
+url = "https://www.youtube.com/channel/UCFKIGYXuOwqkeWpV-_OxeHQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Escola de História da Igreja"
+description = "Conheça a História da Igreja com amplitude e profundidade."
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.EscoladeHistoriadaIgreja.cleanup]
+enabled = true
+
+
+[feeds.RicaPerrone]
+url = "https://www.youtube.com/channel/UCkYRv-hbWjbq8YC_ZsoYoMg"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Rica Perrone"
+description = "Notícias Futebol"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.RicaPerrone.cleanup]
+enabled = true
+
+[feeds.PadrePauloRicardo]
+url = "https://www.youtube.com/channel/UCP6L9TPS3pHccVRiDB_cvqQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Padre Paulo Ricardo"
+description = "Padre Paulo Ricardo"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.PadrePauloRicardo.cleanup]
+enabled = true
+
+[feeds.ResumaPeter]
+url = "https://www.youtube.com/channel/UCHBVfzefo0XcJyDcKm3vC1w"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Resuma, Peter"
+description = "Resuma, Peter"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.ResumaPeter.cleanup]
+enabled = true
+
+[feeds.OlavodeCarvalho]
+url = "https://www.youtube.com/channel/UC6RQhzm93SterWntL7GzqYQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Olavo de Carvalho"
+description = "Olavo de Carvalho"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.OlavodeCarvalho.cleanup]
+enabled = true
+
+[feeds.TemdeTutto]
+url = "https://www.youtube.com/channel/UCECL1FVc60xFy-sBlJD2bLw"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Tem de Tutto"
+description = "Tem de Tutto"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.TemdeTutto.cleanup]
+enabled = true
+
+[feeds.FrancaisAuthentique]
+url = "https://www.youtube.com/channel/UCQpM25U6iqaRSO-SZxd5oDw"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Français Authentique"
+description = "Français Authentique"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.FrancaisAuthentique.cleanup]
+enabled = true
+
+[feeds.MauroCezar]
+url = "https://www.youtube.com/channel/UCRcRAyb5Y4x3HVNKBZ9SMLA"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Mauro Cezar"
+description = "Mauro Cezar"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.MauroCezar.cleanup]
+enabled = true
+
+[feeds.LearnItalianwithLucrezia]
+url = "https://www.youtube.com/channel/UCnVc-IW8Q98qFmQcXla5FdQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Learn Italian with Lucrezia"
+description = "Learn Italian with Lucrezia"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.LearnItalianwithLucrezia.cleanup]
+enabled = true
+
+[feeds.LenguaMare]
+url = "https://www.youtube.com/channel/UCCDM2EinoXN1O261mmGobVQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Łengua Mare"
+description = "Łengua Mare"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.LenguaMare.cleanup]
+enabled = true
+
+
+[feeds.CaioCoppolla]
+url = "https://www.youtube.com/channel/UCqkoOgSof-lNcv8OzRPQj6w"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Caio Coppolla"
+description = "Caio Coppolla"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.CaioCoppolla.cleanup]
+enabled = true
+
+[feeds.GuilhermeFreire]
+url = "https://www.youtube.com/channel/UC6KlBoZBta-zkDB2L_nAtqQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Guilherme Freire"
+description = "Guilherme Freire"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.GuilhermeFreire.cleanup]
+enabled = true
+
+[feeds.CanaldoHolder]
+url = "https://www.youtube.com/channel/UCJIcpGAVfGIVgHSQ6oCcrXg"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Canal do Holder"
+description = "Canal do Holder"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.CanaldoHolder.cleanup]
+enabled = true
+
+[feeds.ItalianoAutomatico]
+url = "https://www.youtube.com/channel/UChJtl-bJFgQit_BmjL5axtg"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Italiano Automatico"
+description = "Impara l'Italiano con Italiano Automatico"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.ItalianoAutomatico.cleanup]
+enabled = true
+
+[feeds.IsraelAsaphFla]
+url = "https://www.youtube.com/channel/UCtBJ6xPiEa4dtpR1jcLpwxA"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Israel Asaph Fla"
+description = "Israel Asaph Fla"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.IsraelAsaphFla.cleanup]
+enabled = true
+
+[feeds.MarcoNeves]
+url = "https://www.youtube.com/channel/UCDrvH3r4shfaATN7ADsqujQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Marco Neves"
+description = "Vídeos sobre a língua portuguesa e a linguagem humana."
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.MarcoNeves.cleanup]
+enabled = true
+
+[feeds.LegadoCatolico]
+url = "https://www.youtube.com/channel/UCG_ZHUBtU2uqYQZH_8FBngw"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Legado Católico"
+description = "Legado Católico"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.LegadoCatolico.cleanup]
+enabled = true
+
+[feeds.LucasLancaster]
+url = "https://www.youtube.com/channel/UCIIsXaaB3rGB8WbcnUxIrVw"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Lucas Lancaster"
+description = "História da Igreja, História Ocidental e de Patrologia"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.LucasLancaster.cleanup]
+enabled = true
+
+[feeds.olavoredpill]
+url = "https://www.youtube.com/channel/UCryU6hRaiOzXKipk6_AEAlg"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "OLAVO REDPILL"
+description = "OLAVO REDPILL"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.olavoredpill.cleanup]
+enabled = true
+
+[feeds.Coisasqueeusei]
+url = "https://www.youtube.com/channel/UCEw17H1rRG0Kh5RsAvECXxQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Coisas que eu sei"
+description = "Coisas que eu sei"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.Coisasqueeusei.cleanup]
+enabled = true
+
+[feeds.ManrastaConnection]
+url = "https://www.youtube.com/channel/UCPUP2xfJDmzazTdrrTdyNmw"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "MANRASTA CONNECTION"
+description = "MANRASTA CONNECTION"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.ManrastaConnection.cleanup]
+enabled = true
+
+[feeds.InstitutoBorborema]
+url = "https://www.youtube.com/channel/UCDAjiHmQnkHrIBNai5PiSyg"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Instituto Borborema"
+description = "Instituto Borborema"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.InstitutoBorborema.cleanup]
+enabled = true
+
+[feeds.GazetadoPovo]
+url = "https://www.youtube.com/channel/UCWdGgeyOnCOGnvhNdbVl1dQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "audio"
+title = "Gazeta do Povo"
+description = "Gazeta do Povo"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.GazetadoPovo.cleanup]
+enabled = true
+
+[feeds.CortesdaTNTSports]
+url = "https://www.youtube.com/channel/UC58zOo8_-ZQVF6o-FKMUqCQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Cortes da TNT Sports"
+description = "Cortes da TNT Sports"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.CortesdaTNTSports.cleanup]
+enabled = true
+
+[feeds.MelhorFuteboldoMundo]
+url = "https://www.youtube.com/channel/UCiQ7Ll2Gsb5eQhgQQhZ2lGQ"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "Melhor Futebol do Mundo"
+description = "Melhor Futebol do Mundo"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.MelhorFuteboldoMundo.cleanup]
+enabled = true
+
+[feeds.TNTSportsBrasil]
+url = "https://www.youtube.com/channel/UCs-6sCz2LJm1PrWQN4ErsPw"
+page_size = 20
+update_period = "30m"
+quality = "high"
+format = "video"
+title = "TNT Sports Brasil"
+description = "TNT Sports Brasil"
+thumbnail = true
+cron_schedule = "@every 12h"
+[feeds.TNTSportsBrasil.cleanup]
+enabled = true
+
+
+# Youtube-dl specific configuration.
+[downloader]
+# Optional, auto update youtube-dl every 24 hours
+self_update = true
+# Download timeout in minutes.
+timeout = 15
