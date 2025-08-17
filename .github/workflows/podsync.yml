@@ -21,14 +21,14 @@ jobs:
 
       - name: Build Podsync
         run: |
-          go build -o podsync-bin ./podsync/cmd/podsync
+          cd podsync
+          go build -o ../podsync-bin ./cmd/podsync
 
       - name: List files for debugging
         run: ls -la
 
       - name: Run Podsync
         run: ./podsync-bin --config podsync.json --token tokens.toml
-
 
       - name: Copy feeds to repo
         run: |
