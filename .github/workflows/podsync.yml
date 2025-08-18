@@ -2,7 +2,7 @@ name: Run Podsync
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Executa a cada 6 horas
+    - cron: '0 */1 * * *'  # Executa a cada 1 horas
   workflow_dispatch:       # Permite execução manual
 
 jobs:
@@ -23,8 +23,17 @@ jobs:
             -v ${{ github.workspace }}/data:/app/data \
             ghcr.io/mxpv/podsync:latest
 
-      - name: Upload dos feeds gerados
-        uses: actions/upload-artifact@v4
-        with:
-          name: podcast-feeds
-          path: data/
+      - name: Copiar feeds para pasta docs
+        run: |
+          mkdir -p docs
+          cp -r data/* docs/
+
+      - name: Commit e push dos feeds
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add docs/
+          git commit -m "Atualiza feeds do Podsync"
+          git pull --rebase
+          git push
+
