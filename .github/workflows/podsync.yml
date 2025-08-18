@@ -16,12 +16,18 @@ jobs:
       - name: Criar pasta de saída
         run: mkdir -p data
 
-      - name: Rodar Podsync com config.toml
+      - name: Criar arquivo cookies.txt a partir do Secret
+        run: |
+          echo "${{ secrets.YOUTUBE_COOKIES }}" | awk '{print}' > .github/podsync/cookies.txt
+
+      - name: Rodar Podsync com config.toml e cookies
         run: |
           docker run --rm \
             -v ${{ github.workspace }}/.github/podsync/config.toml:/app/config.toml \
+            -v ${{ github.workspace }}/.github/podsync/cookies.txt:/app/cookies.txt \
             -v ${{ github.workspace }}/data:/app/data \
-            ghcr.io/mxpv/podsync:latest
+            ghcr.io/mxpv/podsync:latest \
+            --cookies /app/cookies.txt
 
       - name: Copiar feeds para pasta docs
         run: |
@@ -33,7 +39,7 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add docs/
-          git commit -m "Atualiza feeds do Podsync"
-          git pull --rebase
+          git diff --cached --quiet || git commit -m "Atualiza feeds do Podsync"
+          git pull --rebase || true
           git push
 
