@@ -27,7 +27,6 @@ jobs:
             -v ${{ github.workspace }}/.github/podsync/cookies.txt:/app/cookies.txt \
             -v ${{ github.workspace }}/data:/app/data \
             ghcr.io/mxpv/podsync:latest \
-            --cookies /app/cookies.txt
 
       - name: Copiar feeds para pasta docs
         run: |
